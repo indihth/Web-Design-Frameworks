@@ -1,4 +1,10 @@
-$primary: rgb(86, 31, 120);
+// $primary: rgb(86, 31, 120);
+
+// globals 
+
+$enable-rounded:              false !default;
+$enable-shadows:              true !default;
+$enable-gradients:            true !default;
 
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
