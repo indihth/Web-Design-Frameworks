@@ -1,4 +1,4 @@
-.hero-img {
+/* .hero-img {
 	height: 440px;
 	width: 1140px;
 	object-fit: cover;
@@ -6,7 +6,7 @@
 
 .img-fit {
     object-fit: cover;
-}
+} */
 
 /* zoomed and blurred version of hero image */
 .hero-bg-blur {

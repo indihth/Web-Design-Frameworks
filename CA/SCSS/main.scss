@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Patrick+Hand&family=Playfair+Display:wght@400;500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Patrick+Hand&family=Playfair+Display:wght@400;500&display=swap");
 
 // import functions
 @import "../node_modules/bootstrap/scss/functions";
@@ -9,14 +8,17 @@
 $enable-negative-margins: true;
 $enable-shadows: true;
 $link-decoration: none;
+$enable-rounded: true;
 // $enable-gradients: true;
 
 // colors
+
 $primary: rgb(222, 144, 6);
 $secondary: rgb(111, 191, 190);
 $success: rgb(154, 235, 163);
+$info: #90a4ef;
 
-$light: rgb(255, 255, 255);
+$light: #f0f2f1;
 $dark: rgb(29, 29, 29);
 
 // Fonts
@@ -24,57 +26,86 @@ $dark: rgb(29, 29, 29);
 // $font-family-base: "Patrick Hand";
 // $font-family-base: "IBM Plex Mono";
 
+// // scss-docs-start font-variables
+// // stylelint-disable value-keyword-case
+// $font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// // stylelint-enable value-keyword-case
+// $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
+// $font-family-code:            var(--#{$prefix}font-monospace) !default;
+
 // Spacing
 $spacer: 1rem;
 $spacers: (
-	//sass map
-	0: 0,
-	1: $spacer * 0.25,
-	2: $spacer * 0.5,
-	3: $spacer,
-	4: $spacer * 2,
-	5: $spacer * 4,
-	6: $spacer * 6
+  //sass map
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 4,
+  6: $spacer * 6
 );
 
 // Border radius
-$border-radius: 1rem;
+$border-radius: 0.25rem;
+
+// Container sizes
 
 // import variables and mixins
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+$input-btn-font-size: 0.625;
+
+// Buttons
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 3rem;
+$btn-font-family: $input-btn-font-family;
+$btn-font-size: 0.625;
+
+$btn-padding-y-sm: 0.35rem;
+$btn-padding-x-sm: 1rem;
+$btn-font-size-sm: .875rem;	
+
+$btn-padding-y-lg: 0.5rem;
+$btn-padding-x-lg: 1rem;
+$btn-font-size-lg: 0.625;
+
+// font sizes
+
+$h1-font-size: 3.25rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.999rem;
+$h4-font-size: 1.414rem;
+$h5-font-size: 1rem;
+$h6-font-size: 0.875rem;
+
 // custom colours
 
 $custom-colors: (
-	"contrast": rgb(251, 230, 0),
-	"primary-light": rgb(164, 213, 235),
-	"secondary-dark": rgb(13, 111, 97),
+  "contrast": rgb(251, 230, 0),
+  "primary-light": rgb(164, 213, 235),
+  "secondary-dark": rgb(13, 111, 97),
 );
 
 // merge custom colours with theme colours
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // remove colours from the theme
-$theme-colors: map-remove(
-	$theme-colors,
-	"danger",
-	"warning",
-	"success",
-	"info"
-);
+$theme-colors: map-remove($theme-colors, "danger", "warning", "success");
 
 // Box shadow
-// $box-shadow: -0.5rem 0.5rem 1rem $contrast;	
+// $box-shadow: -0.5rem 0.5rem 1rem $contrast;
 
 // Color loops
 @each $color, $val in $colors {
-	.bg-#{$color} {
-		background-color: $val;
-	}
-	.bg-#{$color}-light {
-		background-color: tint-color($val, 60%);
-	}
+  .bg-#{$color} {
+    background-color: $val;
+  }
+  .bg-#{$color}-light {
+    background-color: tint-color($val, 60%);
+  }
 }
 
 // Card image height
@@ -85,7 +116,80 @@ $theme-colors: map-remove(
   object-fit: cover;
 }
 
+.img-fit {
+  object-fit: cover;
+}
 
+.hero-img {
+  height: 440px;
+  width: 100%;
+}
+
+.detail-img {
+  height: 30rem;
+  width: 100%;
+}
+
+.org-img {
+  height: 74px;
+  width: 74px;
+}
+
+.tags > li {
+	margin-right: 1rem;
+	margin-top: 1rem;
+}
+
+// Containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  //reduced size of largest container
+  xxl: 1140px,
+);
+
+// Source mixin
+@mixin make-container($padding-x: $container-padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-fix-sm {
+  @include make-container();
+  max-width: 700px;
+}
+
+// Org Name and Follow elements - stack on mobile
+// .org-follow {
+
+// }
+// upwards of the small container display felx
+@include media-breakpoint-up(sm) {
+  .org-follow {
+    display: flex;
+	justify-content: start;
+  }
+}
+
+// Org Follow - padding
+// On mobile display stacked with 1rem mt
+// Above, display flex with left margin
+.follow {
+  margin-top: 1rem;
+}
+@include media-breakpoint-up(sm) {
+  .follow {
+    display: flex;
+	justify-content: start;
+	margin-left: 3rem;
+	margin-top: 0;
+  }
+}
 
 // import bootstrap.scss
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

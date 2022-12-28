@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Volunteer Website</title>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="scss/main.css" />
+    <!-- <link rel="stylesheet" href="css/custom.css" /> -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
@@ -57,29 +57,26 @@
       <!--hero background image in first container with colour wave, top padding-->
       <div class="container-lg pt-3 mx-auto">
         <!-- hero image container with 50% zoomed and blurred, large side margins -->
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center mb-4">
           <!-- blurred background image -->
           <!-- <div class="hero-bg-blur" style="background-image:url(images/details_bg.avif)""></div> -->
-
           <img
-            src="images/details_image.avif"
+            src="images/media_hero.avif"
             alt="event poster"
-            class="rounded img-fit img-fluid"
-            style="height: 50%; width: 100%"
+            class="img-fluid rounded rounded-4"
           />
-          <!-- <img src="images/details_image.avif" alt="event poster" class="hero-img" style="height: 440px; width: 1140px; object-fit: cover;"> -->
         </div>
       </div>
     </div>
     <!-- Begin of details -->
     <div class="container-lg mx-auto">
       <div class="row">
-        <h6>Dec 02</h6>
+        <h5 class="h5 mt-3 mb-n2 fw-bold">Dec 02</h5>
       </div>
       <div class="row">
         <!-- Left Column -->
         <div class="col-sm-8">
-          <h1 class="lh-base">Christmas Wreath and Garland Making Workshop</h1>
+          <h1 class="h1 lh-sm">Christmas Wreath and Garland Making Workshop</h1>
 
           <!-- limit the width on desktop for easier reading -->
           <p class="my-3 text-wrap" width="130px">
@@ -87,38 +84,39 @@
             wreaths and garlands with seasonal berries, leaves and flowers!
           </p>
 
-          <div class="d-flex align-items-center">
-            <p class="mb-0 fw-bold">By Festina Lente</p>
-            <div class="d-flex align-items-center ms-5">
+          <!-- Org name and Follow -->
+          <div class="org-follow">
+            <div class="d-flex align-items-center">
+              <p class="mb-0 fw-bold">By Festina Lente</p>
+            </div>
+            <div class="follow d-flex align-items-center">
               <p class="mb-0 fw-bold">283 followers</p>
-              <div class="btn ms-3">Follow</div>
+              <div class="btn btn-sm btn-outline-info text-bold ms-3">
+                Follow
+              </div>
             </div>
           </div>
 
           <!-- When and Where -->
-          <h3 class="mt-5 mb-3">When and Where</h3>
+          <h2 class="h2 mt-5 mb-3">When and Where</h2>
           <div class="row">
             <div class="col-sm-6">
-              <div class="row">
-                <div class="col-sm-2 justify-content-end">
-                  <i class="bi bi-calendar-event fs-5"></i>
-                </div>
-                <div class="col-sm-10">
-                  <p class="fw-bold">Date and Time</p>
+              <div class="d-flex align-items-top">
+                <i class="me-3 bi bi-calendar-event fs-5"></i>
+                <div class="">
+                  <h6 class="fw-bold">Date and Time</h6>
                   <p class="text-wrap">Festine Lente A98NY31,<br />Bray</p>
-                  <h6 class="link-secondary fw-bold">More Options</h6>
+                  <a href="#" class="link-info">More Options</a>
                 </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="row">
-                <div class="col-sm-2 justify-content-end">
-                  <i class="bi bi-geo-alt fs-5 text-end"></i>
-                </div>
-                <div class="col-sm-10">
-                  <p class="fw-bold">Location</p>
+              <div class="d-flex align-items-top">
+                <i class="me-3 bi bi-geo-alt fs-5 text-end"></i>
+                <div class="">
+                  <h6 class="fw-bold">Location</h6>
                   <p class="text-wrap">Festine Lente A98NY31,<br />Bray</p>
-                  <h6 class="link-secondary fw-bold">More Options</h6>
+                  <a href="#" class="link-info">More Options</a>
                 </div>
               </div>
             </div>
@@ -130,20 +128,19 @@
             <img
               src="images/map.avif"
               alt="city map"
-              class="rounded img-fit"
-              style="height: 25rem; width: 100%"
+              class="img-fluid rounded"
             />
           </div>
           <p class="fw-bold mt-3 text-center">How to get there</p>
           <!-- End Map -->
 
           <!-- Refund Info -->
-          <h3 class="mt-5 mb-3">Refund Policy</h3>
+          <h2 class="h2 mt-5 mb-3">Refund Policy</h2>
           <p>Contact the organiser to request a refund.</p>
           <!-- End Refund Info -->
 
           <!-- About Event -->
-          <h3 class="mt-5 mb-4">About this event</h3>
+          <h2 class="h2 mt-5 mb-4">About this event</h2>
           <div class="d-flex ps-3 fw-bold align-items-center">
             <i class="bi bi-clock fs-5 me-2"></i>
             <p class="mb-0">1 hour 30 minutes</p>
@@ -185,12 +182,15 @@
           <!-- End About Event -->
 
           <!-- Tags -->
-          <h3 class="mt-5 mb-4">Tags</h3>
-          <div class="d-flex">
-            <a href="#" class="btn">Ireland Events</a>
-            <a href="#" class="btn">Things to do in Bray</a>
-            <a href="#" class="btn">Wickow Events</a>
-          </div>
+          <!-- put tags in list -->
+          <h2 class="h2 mt-5 mb-4">Tags</h2>
+
+          <ul class="tags list-unstyled d-flex flex-wrap">
+            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Ireland Events</a></li>
+            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Things to do in Bray</a></li>
+            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Wickow Events</a></li>
+            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Dublin City Events</a></li>
+          </ul>
           <!-- End Tags -->
         </div>
         <!-- End Left Column -->
@@ -198,7 +198,7 @@
         <!-- Right Column - buy button -->
         <!-- Fixed side position on scroll, change to fixed bottom bar on mobile? -->
         <div class="col-sm-4">
-          <div class="border rounded p-3">
+          <div class="border rounded-4 p-3">
             <p class="text-center">£30</p>
             <div class="d-grid gap-2">
               <button class="btn btn-primary" type="button">Button</button>
@@ -211,135 +211,188 @@
 
     <!-- Organisation Info -->
     <div class="container-fluid mx-auto mt-4 border">
-      <div class="container-lg py-4 text-center">
-        <h4 class="mb-3">Festina Lente</h4>
-        <p class="fw-bold">
+      <div class="container-fix-sm py-4 text-center">
+        <img
+          src="images/org_profile_img.avif"
+          class="org-img img-fit rounded-circle"
+          alt="horse in stable"
+        />
+        <h3 class="h6 fw-bold my-3">Festina Lente</h3>
+        <p class="h6 fw-bold">
           Organiser of Christmas Wreath and Garland Making Workshop
         </p>
-        <p>
-          Suitable for adults: Both individuals and groups welcome: friends
-          catching up, family, corporate, community team building. Suitable for
-          adults: Both individuals and groups welcome: friends catching up,
-          family, corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.Suitable for adults: Both
-          individuals and groups welcome: friends catching up, family,
-          corporate, community team building.
+        <p class="h6 fw-normal">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+          blanditiis quibusdam distinctio dignissimos dicta libero, ut eaque
+          consequatur ipsa, quia deleniti animi quod! Debitis aperiam nihil id
+          veniam repellendus cupiditate? Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Rerum blanditiis, natus, minus eos minima
+          consequatur odio ullam illum adipisci vel distinctio maiores quibusdam
+          beatae eveniet obcaecati molestias autem ex. Vero? Lorem ipsum dolor
+          sit amet, consectetur adipisicing elit. Error possimus et illo iste,
+          atque, beatae aliquam aliquid molestias praesentium suscipit sunt
+          quis, similique voluptatum! Minima officia incidunt eum illum
+          cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Non, beatae ducimus quis ut facere totam repudiandae inventore,
+          tempore officia autem enim nihil eos placeat eligendi porro quasi
+          veritatis consequuntur fuga.
         </p>
 
         <div class="d-flex justify-content-center mt-5">
-          <button class="btn btn-primary me-3">Follow</button>
-          <button class="btn btn-primary">Contact</button>
+          <button class="btn btn-outline-infome-3">Follow</button>
+          <button class="btn btn-outline-info border-0 shadow-none">
+            Contact
+          </button>
         </div>
       </div>
     </div>
     <!-- End Organisation Info -->
 
     <!-- More from this Organiser -->
+
+    <div class="container-fix-sm">
+      <h2 class="h2 mt-4 mb-3 text-center mb-5">Other events you may like</h2>
+      <div class="row">
+        <div class="col-sm-4 order-sm-last mb-4 d-flex justify-content-end">
+          <img
+            src="images/from_org_img.avif"
+            class="img-fluid"
+            alt="craft bench"
+          />
+          <!-- <img
+            src="images/from_org_img.avif"
+            class="img-fit rounded"
+            alt="craft bench"
+            style="height: 100px; width: 200px"
+          /> -->
+        </div>
+        <div class="col-sm-8">
+          <h4 class="h4 fw-bold">Winter Gardening Workshop Series</h4>
+          <p class="text-primary fw-bold">Sun, Nov 13, 2:00 PM</p>
+          <p class="">Festine Lente - Bray</p>
+          <p class="fw-bold">Starts at $50</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <h4 class="h4">Postcard Crafting Workshop</h4>
+          <p class="primary">Tue, Nov 16, 1:00 PM</p>
+          <p>Community Center - Dun Laoghaire</p>
+          <p class="fw-bold">Starts at $30</p>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <img
+            src="images/craft_table.avif"
+            class="img-fit rounded"
+            alt="craft bench"
+            style="height: 100px; width: 200px"
+          />
+        </div>
+      </div>
+    </div>
+
     <!-- End More from this Organiser -->
 
     <!-- Events you may like -->
-    <div class="container-lg">
-      <h3 class="mt-4 mb-3">Other events you may like</h3>
-      <div class="row">
-        <div class="col-md-4 col-sm-6 mt-3">
-          <div class="card">
-            <img src="images/card1.avif" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <div class="d-flex justify-content-between text-primary">
-                <p>3.30pm</p>
-                <p>6 spots left</p>
-              </div>
-              <h4 class="card-title">Amet minim mollit non deserunt ullamco</h4>
-
-              <p class="card-text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-              </p>
-
-              <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="images/logo1.png"
-                    alt="Volunteer Logo"
-                    class="border rounded-circle"
-                  />
-                  <p class="m-0">All in One</p>
+    <div class="container-fluid secondary border-top bg-contrast-light">
+      <div class="container-lg">
+        <h2 class="h2 mt-4 mb-3">Other events you may like</h2>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 mt-3">
+            <div class="card">
+              <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <div class="d-flex justify-content-between text-primary">
+                  <p>3.30pm</p>
+                  <p>6 spots left</p>
                 </div>
-                <div>
-                  <p>Learn more</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6 mt-3">
-          <div class="card">
-            <img src="images/card1.avif" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <div class="d-flex justify-content-between text-primary">
-                <p>3.30pm</p>
-                <p>6 spots left</p>
-              </div>
-              <h4 class="card-title">Amet minim mollit non deserunt ullamco</h4>
+                <h3 class="h3 card-title">
+                  Amet minim mollit non deserunt ullamco
+                </h3>
 
-              <p class="card-text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-              </p>
+                <p class="card-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim.
+                </p>
 
-              <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="images/logo1.png"
-                    alt="Volunteer Logo"
-                    class="border rounded-circle"
-                  />
-                  <p class="m-0">All in One</p>
-                </div>
-                <div>
-                  <p>Learn more</p>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="images/logo1.png"
+                      alt="Volunteer Logo"
+                      class="border rounded-circle"
+                    />
+                    <p class="m-0">All in One</p>
+                  </div>
+                  <div>
+                    <p>Learn more</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 col-sm-6 mt-3">
-          <div class="card">
-            <img src="images/card1.avif" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <div class="d-flex justify-content-between text-primary">
-                <p>3.30pm</p>
-                <p>6 spots left</p>
-              </div>
-              <h4 class="card-title">Amet minim mollit non deserunt ullamco</h4>
-
-              <p class="card-text">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim.
-              </p>
-
-              <div class="d-flex justify-content-between">
-                <div class="d-flex align-items-center">
-                  <img
-                    src="images/logo1.png"
-                    alt="Volunteer Logo"
-                    class="border rounded-circle"
-                  />
-                  <p class="m-0">All in One</p>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <div class="card">
+              <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <div class="d-flex justify-content-between text-primary">
+                  <p>3.30pm</p>
+                  <p>6 spots left</p>
                 </div>
-                <div>
-                  <p>Learn more</p>
+                <h3 class="h3 card-title">
+                  Amet minim mollit non deserunt ullamco
+                </h3>
+
+                <p class="card-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim.
+                </p>
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="images/logo1.png"
+                      alt="Volunteer Logo"
+                      class="border rounded-circle"
+                    />
+                    <p class="m-0">All in One</p>
+                  </div>
+                  <div>
+                    <p>Learn more</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 mt-3">
+            <div class="card">
+              <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <div class="d-flex justify-content-between text-primary">
+                  <p>3.30pm</p>
+                  <p>6 spots left</p>
+                </div>
+                <h3 class="h3 card-title">
+                  Amet minim mollit non deserunt ullamco
+                </h3>
+
+                <p class="card-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                  amet sint. Velit officia consequat duis enim.
+                </p>
+
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="images/logo1.png"
+                      alt="Volunteer Logo"
+                      class="border rounded-circle"
+                    />
+                    <p class="m-0">All in One</p>
+                  </div>
+                  <div>
+                    <p>Learn more</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -360,9 +413,9 @@
             <!-- Grid column -->
             <!-- <div class="col-md-3 mx-auto mb-4">
 							Content
-							<h6 class="text-uppercase fw-bold mb-4">
+							<h5 class="text-uppercase fw-bold mb-4">
 								Community Volunteer
-							</h6>
+							</h5>
 							<p>
 								Here you can use rows and columns to organize your footer
 								content. Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -374,7 +427,7 @@
             <!-- Grid column -->
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <h5 class="text-uppercase fw-bold mb-4">Products</h5>
               <p>
                 <a href="#!" class="text-reset">Angular</a>
               </p>
@@ -393,7 +446,7 @@
             <!-- Grid column -->
             <div class="col-md-2 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <h5 class="text-uppercase fw-bold mb-4">Useful links</h5>
               <p>
                 <a href="#!" class="text-reset">Pricing</a>
               </p>
@@ -412,7 +465,7 @@
             <!-- Grid column -->
             <div class="col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
               <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
