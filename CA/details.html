@@ -53,25 +53,19 @@
         </div>
       </div>
     </nav>
-    <div class="containter-fluid">
+    <div class="container-lg px-0 px-sm-6">
       <!--hero background image in first container with colour wave, top padding-->
-      <div class="container-lg pt-3 mx-auto">
-        <!-- hero image container with 50% zoomed and blurred, large side margins -->
-        <div class="d-flex justify-content-center mb-4">
-          <!-- blurred background image -->
-          <!-- <div class="hero-bg-blur" style="background-image:url(images/details_bg.avif)""></div> -->
-          <img
-            src="images/media_hero.avif"
-            alt="event poster"
-            class="img-fluid rounded rounded-4"
-          />
-        </div>
-      </div>
+
+      <!-- hero image container with 50% zoomed and blurred, large side margins -->
+      <!-- blurred background image -->
+      <!-- <div class="hero-bg-blur" style="background-image:url(images/details_bg.avif)""></div> -->
+      <!-- <img src="images/hero-bg.avif" alt="event poster" class="img-bg"/> -->
+      <img src="images/media_hero.avif" alt="event poster" class="img-fluid"/>
     </div>
     <!-- Begin of details -->
-    <div class="container-lg mx-auto">
+    <div class="container-lg ">
       <div class="row">
-        <h5 class="h5 mt-3 mb-n2 fw-bold">Dec 02</h5>
+        <h5 class="h5 mt-3 mb-n1 fw-bold">Dec 02</h5>
       </div>
       <div class="row">
         <!-- Left Column -->
@@ -79,17 +73,17 @@
           <h1 class="h1 lh-sm">Christmas Wreath and Garland Making Workshop</h1>
 
           <!-- limit the width on desktop for easier reading -->
-          <p class="my-3 text-wrap" width="130px">
+          <p class="my-3 pe-sm-6 text-wrap">
             Enjoy the winter wonder delights of making your own luxurious
             wreaths and garlands with seasonal berries, leaves and flowers!
           </p>
 
           <!-- Org name and Follow -->
-          <div class="org-follow">
+          <div class="org-follow d-sm-flex mb-5">
             <div class="d-flex align-items-center">
-              <p class="mb-0 fw-bold">By Festina Lente</p>
+              <p class="mb-2 mb-sm-0 me-sm-4 fw-bold">By Festina Lente</p>
             </div>
-            <div class="follow d-flex align-items-center">
+            <div class="follow d-flex align-items-top align-items-sm-center">
               <p class="mb-0 fw-bold">283 followers</p>
               <div class="btn btn-sm btn-outline-info text-bold ms-3">
                 Follow
@@ -98,25 +92,41 @@
           </div>
 
           <!-- When and Where -->
-          <h2 class="h2 mt-5 mb-3">When and Where</h2>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="d-flex align-items-top">
-                <i class="me-3 bi bi-calendar-event fs-5"></i>
-                <div class="">
-                  <h6 class="fw-bold">Date and Time</h6>
-                  <p class="text-wrap">Festine Lente A98NY31,<br />Bray</p>
-                  <a href="#" class="link-info">More Options</a>
+          <div class="">
+            <h2 class="h2 mb-3">When and Where</h2>
+            <div class="row mb-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start mb-4">
+                  <div class="h6 detail-icon me-3 rounded-3 bg-secondary">
+                    <i class="bi bi-calendar-event"></i>
+                  </div>
+                  <div class="loc-date h6">
+                    <h6 class="fw-bold mb-1">Date and Time</h6>
+                    <!-- flex on small screen, both <p>s on same line -->
+                    <div class="d-flex d-sm-block">
+                      <p class="mb-1">Fri, 2 December 2022,</p>
+                      <!-- margin start for sm screen -->
+                      <p class="ms-1 ms-sm-0 mb-1">11:00 - 12:30 GMT</p>
+                    </div>
+                    <a href="#" class="link-info">More Options</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="d-flex align-items-top">
-                <i class="me-3 bi bi-geo-alt fs-5 text-end"></i>
-                <div class="">
-                  <h6 class="fw-bold">Location</h6>
-                  <p class="text-wrap">Festine Lente A98NY31,<br />Bray</p>
-                  <a href="#" class="link-info">More Options</a>
+              <div class="col-sm-6 ps-sm-3">
+                <div class="d-flex align-items-start">
+                  <div class="ps-sm-4 location">
+                    <div class="h5 detail-icon me-3 rounded-3 bg-secondary">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                  </div>
+                  <div class="h6">
+                    <h6 class="fw-bold mb-1">Location</h6>
+                    <div class="d-flex d-sm-block">
+                      <p class="mb-1">Festine Lente A98NY31,</p>
+                      <p class="ms-1 ms-sm-0 mb-1">Bray</p>
+                    </div>
+                    <a href="#" class="link-info">More Options</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,7 +134,7 @@
           <!-- End When and Where -->
 
           <!-- Map -->
-          <div class="mt-5">
+          <div class="">
             <img
               src="images/map.avif"
               alt="city map"
@@ -135,61 +145,102 @@
           <!-- End Map -->
 
           <!-- Refund Info -->
-          <h2 class="h2 mt-5 mb-3">Refund Policy</h2>
-          <p>Contact the organiser to request a refund.</p>
+          <div class="mt-4 mb-5">
+            <h2 class="h2 mb-3">Refund Policy</h2>
+            <p>
+              Contact the organiser to request a refund. Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Natus cum ut necessitatibus
+              sit? Dolores iusto eum obcaecati ut eos! Mollitia laboriosam
+              accusantium magni eaque officia fuga ut veritatis amet
+              repellendus.
+            </p>
+          </div>
           <!-- End Refund Info -->
 
           <!-- About Event -->
-          <h2 class="h2 mt-5 mb-4">About this event</h2>
-          <div class="d-flex ps-3 fw-bold align-items-center">
-            <i class="bi bi-clock fs-5 me-2"></i>
-            <p class="mb-0">1 hour 30 minutes</p>
-          </div>
+          <div class="mb-5">
+            <h2 class="h2">About this event</h2>
 
-          <div class="mt-4">
-            <img
-              src="images/garland.avif"
-              alt="city map"
-              class="rounded img-fit"
-              style="height: 30rem; width: 100%"
-            />
-          </div>
-          <p class="fw-bold mt-4">
-            “What is Christmas? It is the tenderness of the past, courage for
-            the present, and hope for the future.”
-          </p>
+            <!-- stack on small, flex above with extra margin to seperate -->
+            <div class="d-sm-flex mt-3">
+              <div class="d-flex fw-bold align-items-center me-sm-5">
+                <div class="">
+                  <div class="h5 detail-icon me-2 mb-0 rounded-3 bg-secondary">
+                    <i class="bi bi-clock fs-5"></i>
+                  </div>
+                </div>
+                <p class="mb-0">1 hour 30 minutes</p>
+              </div>
+              <div class="d-flex fw-bold mt-3 align-items-center">
+                <div class="ps-sm-4">
+                  <div class="h5 detail-icon me-2 mb-0 rounded-3 bg-secondary">
+                    <i class="bi bi-ticket fs-5"></i>
+                  </div>
+                </div>
+                <p class="mb-0">Mobile Ticket</p>
+              </div>
+            </div>
 
-          <p class="mt-4">
-            Suitable for adults: Both individuals and groups welcome: friends
-            catching up, family, corporate, community team building. Suitable
-            for adults: Both individuals and groups welcome: friends catching
-            up, family, corporate, community team building.Suitable for adults:
-            Both individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.Suitable for adults: Both
-            individuals and groups welcome: friends catching up, family,
-            corporate, community team building.
-          </p>
+            <div class="mt-4 mb-2">
+              <img
+                src="images/painting.jpg"
+                alt="city map"
+                class="rounded img-fluid"
+              />
+            </div>
+            <p class="fw-bold">
+              “What is Christmas? It is the tenderness of the past, courage for
+              the present, and hope for the future.”
+            </p>
+
+            <p class="mt-4">
+              Suitable for adults: Both individuals and groups welcome: friends
+              catching up, family, corporate, community team building. Suitable
+              for adults: Both individuals and groups welcome: friends catching
+              up, family, corporate, community team building.Suitable for
+              adults: Both individuals and groups welcome: friends catching up,
+              family, corporate, community team building.Suitable for adults:
+              Both individuals and groups welcome: friends catching up, family,
+              corporate, community team building.Suitable for adults: Both
+              individuals and groups welcome: friends catching up, family,
+              corporate, community team building.Suitable for adults: Both
+              individuals and groups welcome: friends catching up, family,
+              corporate, community team building.Suitable for adults: Both
+              individuals and groups welcome: friends catching up, family,
+              corporate, community team building.Suitable for adults: Both
+              individuals and groups welcome: friends catching up, family,
+              corporate, community team building.Suitable for adults: Both
+              individuals and groups welcome: friends catching up, family,
+              corporate, community team building.
+            </p>
+          </div>
           <!-- End About Event -->
 
           <!-- Tags -->
           <!-- put tags in list -->
-          <h2 class="h2 mt-5 mb-4">Tags</h2>
+          <h2 class="h2 mb-3">Tags</h2>
 
-          <ul class="tags list-unstyled d-flex flex-wrap">
-            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Ireland Events</a></li>
-            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Things to do in Bray</a></li>
-            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Wickow Events</a></li>
-            <li><a href="#" class="btn btn-light btn-sm rounded-pill">Dublin City Events</a></li>
+          <ul class="tags tag-btn list-unstyled d-flex flex-wrap">
+            <li>
+              <a href="#" class="btn btn-light btn-sm rounded-pill"
+                >Ireland Events</a
+              >
+            </li>
+            <li>
+              <a href="#" class="btn btn-light btn-sm rounded-pill"
+                >Things to do in Bray</a
+              >
+            </li>
+            <li>
+              <a href="#" class="btn btn-light btn-sm rounded-pill"
+                >Wickow Events</a
+              >
+            </li>
+            <li>
+              <a href="#" class="btn btn-light btn-sm rounded-pill"
+                >Dublin City Events</a
+              >
+            </li>
           </ul>
           <!-- End Tags -->
         </div>
@@ -249,13 +300,28 @@
     <!-- End Organisation Info -->
 
     <!-- More from this Organiser -->
-
+    <!-- fix image height, too big for text -->
     <div class="container-fix-sm">
-      <h2 class="h2 mt-4 mb-3 text-center mb-5">Other events you may like</h2>
-      <div class="row">
-        <div class="col-sm-4 order-sm-last mb-4 d-flex justify-content-end">
+      <h2 class="h2 mt-4 text-center mb-5">Other events you may like</h2>
+      <div class="row mb-4">
+        <div class="col-sm-4 order-sm-last mb-3">
           <img
             src="images/from_org_img.avif"
+            class="img-fluid"
+            alt="craft bench"
+          />
+        </div>
+        <div class="col-sm-8 ms-2 ms-sm-0 h6">
+          <h4 class="h5">Winter Gardening Workshop Series</h4>
+          <p class="text-primary mb-1">Sun, Nov 13, 2:00 PM</p>
+          <p class="mb-1">Festine Lente - Bray</p>
+          <p class="">Starts at $50</p>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-sm-4 order-sm-last mb-3">
+          <img
+            src="images/craft_table.avif"
             class="img-fluid"
             alt="craft bench"
           />
@@ -266,35 +332,18 @@
             style="height: 100px; width: 200px"
           /> -->
         </div>
-        <div class="col-sm-8">
-          <h4 class="h4 fw-bold">Winter Gardening Workshop Series</h4>
-          <p class="text-primary fw-bold">Sun, Nov 13, 2:00 PM</p>
-          <p class="">Festine Lente - Bray</p>
-          <p class="fw-bold">Starts at $50</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-8">
-          <h4 class="h4">Postcard Crafting Workshop</h4>
-          <p class="primary">Tue, Nov 16, 1:00 PM</p>
-          <p>Community Center - Dun Laoghaire</p>
-          <p class="fw-bold">Starts at $30</p>
-        </div>
-        <div class="col-4 d-flex justify-content-end">
-          <img
-            src="images/craft_table.avif"
-            class="img-fit rounded"
-            alt="craft bench"
-            style="height: 100px; width: 200px"
-          />
+        <div class="col-sm-8 ms-2 ms-sm-0 h6">
+          <h4 class="h5">Postcard Crafting Workshop</h4>
+          <p class="text-primary mb-1">Tue, Nov 16, 1:00 PM</p>
+          <p class="mb-1">Community Center - Dun Laoghaire</p>
+          <p class="">Starts at $30</p>
         </div>
       </div>
     </div>
-
     <!-- End More from this Organiser -->
 
     <!-- Events you may like -->
-    <div class="container-fluid secondary border-top bg-contrast-light">
+    <div class="container-fluid border-top bg-contrast-light mb-5">
       <div class="container-lg">
         <h2 class="h2 mt-4 mb-3">Other events you may like</h2>
         <div class="row">
@@ -333,7 +382,7 @@
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <img src="images/card-woman.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <div class="d-flex justify-content-between text-primary">
                   <p>3.30pm</p>
@@ -366,7 +415,7 @@
           </div>
           <div class="col-md-4 col-sm-6 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <img src="images/card-bird.avif" class="card-img-top" alt="..." />
               <div class="card-body">
                 <div class="d-flex justify-content-between text-primary">
                   <p>3.30pm</p>

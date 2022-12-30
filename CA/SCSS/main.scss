@@ -11,10 +11,12 @@ $link-decoration: none;
 $enable-rounded: true;
 // $enable-gradients: true;
 
+
+
 // colors
 
 $primary: rgb(222, 144, 6);
-$secondary: rgb(111, 191, 190);
+$secondary: #f3f3f3;
 $success: rgb(154, 235, 163);
 $info: #90a4ef;
 
@@ -47,6 +49,10 @@ $spacers: (
   6: $spacer * 6
 );
 
+// List group
+$list-group-item-padding-y: $spacer * .3;
+$list-group-border-width: 0;
+
 // Border radius
 $border-radius: 0.25rem;
 
@@ -64,13 +70,20 @@ $btn-padding-x: 3rem;
 $btn-font-family: $input-btn-font-family;
 $btn-font-size: 0.625;
 
-$btn-padding-y-sm: 0.35rem;
+$btn-padding-y-sm: 0.174rem;
 $btn-padding-x-sm: 1rem;
-$btn-font-size-sm: .875rem;	
+$btn-font-size-sm: 0.875rem;
 
 $btn-padding-y-lg: 0.5rem;
 $btn-padding-x-lg: 1rem;
 $btn-font-size-lg: 0.625;
+
+// Custom button values
+
+//Tags
+.tag-btn > li > a {
+  $btn-padding-y-sm: 0.35rem;
+}
 
 // font sizes
 
@@ -108,6 +121,11 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
   }
 }
 
+.sep::after {
+  content: "";
+  border-bottom: gray;
+}
+
 // Card image height
 .card-img,
 .card-img-top,
@@ -136,8 +154,19 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
 }
 
 .tags > li {
-	margin-right: 1rem;
-	margin-top: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.detail-icon {
+  padding: 0.65rem;
+}
+
+// Display divider after small breakpoint
+@media (min-width: 540px) {
+  .location {
+    border-left: 1px solid #dbdae3;
+  }
 }
 
 // Containers
@@ -164,32 +193,37 @@ $container-max-widths: (
   max-width: 700px;
 }
 
+///////////////////////////////////////////////////////
+/// Replaced media-breakpoints with d-sm-flex
+///////////////////////////////////////////////////////
 // Org Name and Follow elements - stack on mobile
 // .org-follow {
 
 // }
 // upwards of the small container display felx
-@include media-breakpoint-up(sm) {
-  .org-follow {
-    display: flex;
-	justify-content: start;
-  }
-}
+// @include media-breakpoint-up(sm) {
+//   .org-follow {
+//     display: flex;
+// 	justify-content: start;
+//   }
+// }
 
-// Org Follow - padding
-// On mobile display stacked with 1rem mt
-// Above, display flex with left margin
-.follow {
-  margin-top: 1rem;
-}
-@include media-breakpoint-up(sm) {
-  .follow {
-    display: flex;
-	justify-content: start;
-	margin-left: 3rem;
-	margin-top: 0;
-  }
-}
+// // Org Follow - padding
+// // On mobile display stacked with 1rem mt
+// // Above, display flex with left margin
+// .follow {
+//   margin-top: 1rem;
+// }
+// @include media-breakpoint-up(sm) {
+//   .follow {
+//     display: flex;
+// 	justify-content: start;
+// 	margin-left: 3rem;
+// 	margin-top: 0;
+//   }
+// }
+///////////////////////////////////////////////////////
+/// ///////////////////////////////////////////////////////
 
 // import bootstrap.scss
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
