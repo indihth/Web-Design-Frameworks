@@ -11,17 +11,17 @@ $link-decoration: none;
 $enable-rounded: true;
 // $enable-gradients: true;
 
-
-
 // colors
 
 $primary: rgb(222, 144, 6);
-$secondary: #f3f3f3;
+$secondary: #6fbfbf;
+// $secondary:      #f3f3f3;
 $success: rgb(154, 235, 163);
 $info: #90a4ef;
+// $info: #3659e3;
 
 $light: #f0f2f1;
-$dark: rgb(29, 29, 29);
+$dark: #39364f;
 
 // Fonts
 // $font-family-base: "Playfair Display";
@@ -50,7 +50,7 @@ $spacers: (
 );
 
 // List group
-$list-group-item-padding-y: $spacer * .3;
+$list-group-item-padding-y: $spacer * 0.3;
 $list-group-border-width: 0;
 
 // Border radius
@@ -60,7 +60,39 @@ $border-radius: 0.25rem;
 
 // import variables and mixins
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/card";
+
+// Width
+
+$utilities: map-merge(
+  $utilities,
+  (
+    // "width": map-merge(
+    //   map-get($utilities, "width"),
+    //   ( responsive: true ),
+    // ),
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          responsive: true,
+          values:
+            map-merge(
+              map-get(map-get($utilities, "width"), "values"),
+              (
+                10: 10%,
+                80: 80%,
+                85: 85%,
+                90: 90%,
+              )
+            ),
+        )
+      )
+  )
+);
 
 $input-btn-font-size: 0.625;
 
@@ -78,11 +110,37 @@ $btn-padding-y-lg: 0.5rem;
 $btn-padding-x-lg: 1rem;
 $btn-font-size-lg: 0.625;
 
+// Thumbnail images
+$thumbnail-padding: 0;
+$thumbnail-border-width: 0;
+$thumbnail-border-radius: 0.5rem;
+
+// Shadows
+$box-shadow: 0 0.25rem 0.75rem rgba($black, 0.075);
+
+// Cards
+$card-box-shadow: $box-shadow;
+$card-border-width: 0;
+$card-border-radius: $border-radius-xl;
+$card-inner-border-radius: $card-border-radius;
+
+.card-title {
+  margin-bottom: var(--#{$prefix}card-title-spacer-y);
+  font-size: $h4-font-size;
+}
+
+
 // Custom button values
 
+// Link Styling
+$link-color: $dark;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration: null;
+
 //Tags
-.tag-btn > li > a {
-  $btn-padding-y-sm: 0.35rem;
+.tag-btn > li {
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 // font sizes
@@ -100,6 +158,7 @@ $custom-colors: (
   "contrast": rgb(251, 230, 0),
   "primary-light": rgb(164, 213, 235),
   "secondary-dark": rgb(13, 111, 97),
+  "bg": #f0f2f2,
 );
 
 // merge custom colours with theme colours
@@ -153,20 +212,71 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
   width: 74px;
 }
 
-.tags > li {
-  margin-right: 1rem;
-  margin-top: 1rem;
-}
-
 .detail-icon {
   padding: 0.65rem;
 }
 
+.card-text-main {
+  @extend .w-85 !optional;
+  @extend .w-sm-100 !optional;
+}
+
 // Display divider after small breakpoint
-@media (min-width: 540px) {
+@media (min-width: 576px) {
   .location {
     border-left: 1px solid #dbdae3;
   }
+}
+
+@media (max-width: 576px) {
+  .fix-b {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .rect-img {
+    max-height: 100px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 576px) {
+  .rect-img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 576px) {
+  .card {
+    max-width: 350px;
+  }
+}
+
+// Hover nav bar dropdown menu
+@media all and (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+    display: none;
+  }
+  .navbar .nav-item:hover .nav-link {
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .nav-item .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+// Space nav items
+.nav-item {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 // Containers
@@ -176,7 +286,7 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
   //reduced size of largest container
-  xxl: 1140px,
+  xxl: 1141px,
 );
 
 // Source mixin
@@ -198,7 +308,6 @@ $container-max-widths: (
 ///////////////////////////////////////////////////////
 // Org Name and Follow elements - stack on mobile
 // .org-follow {
-
 // }
 // upwards of the small container display felx
 // @include media-breakpoint-up(sm) {
@@ -207,7 +316,6 @@ $container-max-widths: (
 // 	justify-content: start;
 //   }
 // }
-
 // // Org Follow - padding
 // // On mobile display stacked with 1rem mt
 // // Above, display flex with left margin
@@ -224,6 +332,5 @@ $container-max-widths: (
 // }
 ///////////////////////////////////////////////////////
 /// ///////////////////////////////////////////////////////
-
 // import bootstrap.scss
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
