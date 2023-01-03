@@ -29,7 +29,10 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse justify-content-between navbar-collapse" id="navbarSupportedContent">
+        <div
+          class="collapse justify-content-between navbar-collapse"
+          id="navbarSupportedContent"
+        >
           <form class="d-flex w-100 w-sm-50">
             <input
               class="form-control me-2"
@@ -94,7 +97,7 @@
       </div>
     </nav>
     <div class="containter-fluid">
-      <div class="container-lg my-6">
+      <div class="container-lg mt-5 mb-6">
         <div class="row d-flex align-items-center mb-3">
           <!-- Top page text, center on small screen, left on larger-->
           <div
@@ -121,274 +124,280 @@
         </div>
 
         <!-- Radio buttons and categories -->
-        <div>
-          <h3>Popular in <span class="text-primary">Wicklow</span></h3>
-          <!-- Option radio button list   -->
-          <!-- <ul class="list-group list-group-horizontal">
-            <li class="list-group-item list-group-item-action active"><button class="btn">test</button></li>
-            <li class="list-group-item list-group-item-action"><button class="btn">test</button></li>
-            <li class="list-group-item list-group-item-action"><button class="btn">test</button></li>
-            <li class="list-group-item list-group-item-action"><button class="btn">test</button></li>
-          </ul> -->
-          <div class="">
-            <ul
-              class="list-group list-group-horizontal justify-content-start mb-2 h6"
-            >
-              <li class="list-group-item text-muted">
-                <a class="font-weight-bold" href="#">All</a>
+        <section>
+          <div class="d-flex">
+            <div>
+              <h3>Popular in</h3>
+            </div>
+            <a href="#" class="d-flex align-items-center text-primary">
+              <i class="fas fa-chevron-down fs-6 mx-2 pb-1"></i>
+              <h3 class="border-bottom border-2 pb-1">Wicklow</h3>
+            </a>
+          </div>
+          <!-- Filter options -->
+          <div class="filter">
+            <ul class="list-group list-group-horizontal">
+              <li>
+                <a class="list-group-item list-group-item-action text-muted active" href="#">All</a>
               </li>
-              <li class="list-group-item text-muted">
-                <a class="" href="#">Online</a>
+              <li>
+                <a class="list-group-item list-group-item-action text-muted" href="#">Online</a>
               </li>
-              <li class="list-group-item text-muted">
-                <a class="" href="#">Today</a>
+              <li>
+                <a class="list-group-item list-group-item-action text-muted" href="#">Today</a>
               </li>
-              <li class="list-group-item text-muted">
-                <a class="" href="#">This Weekend</a>
+              <li>
+                <a class="list-group-item list-group-item-action text-muted" href="#">This Weekend</a>
               </li>
             </ul>
+               
+               
+               
+            
           </div>
+          <!-- Filter options end -->
           <h4 class="mt-4 mb-3">Trending Categories</h4>
           <!-- Categories, min of two cols on small screen -->
           <div class="row g-2">
             <div class="col-6 col-md-3 col-sm-6">
-              <div class="d-flex rounded-4 bg-secondary align-items-center">
-                <i class="bi bi-flower1 fs-4 p-3"></i>
-                <div class="pl-4">Category 1</div>
+              <div class="d-flex rounded-4 bg-purple align-items-center py-7">
+                <i class="bi bi-flower1 fs-4 px-3"></i>
+                <div class="pl-4">Animals</div>
               </div>
             </div>
             <div class="col-6 col-md-3 col-sm-6">
-              <div
-                class="d-flex border rounded-4 bg-secondary align-items-center"
-              >
-                <i class="bi bi-flower1 fs-4 p-3"></i>
-                <div class="pl-4">Category 2</div>
+              <div class="d-flex border rounded-4 bg-purple align-items-center py-7">
+                <i class="bi bi-flower1 fs-4 px-3"></i>
+                <div class="pl-4">Outreach</div>
               </div>
             </div>
             <div class="col-6 col-md-3 col-sm-6">
-              <div
-                class="d-flex border rounded-4 bg-secondary align-items-center"
-              >
-                <i class="bi bi-flower1 fs-4 p-3"></i>
-                <div class="pl-4">Category 3</div>
+              <div class="d-flex border rounded-4 bg-purple align-items-center py-7">
+                <i class="bi bi-flower1 fs-4 px-3"></i>
+                <div class="pl-4">Forestry</div>
               </div>
             </div>
             <div class="col-6 col-md-3 col-sm-6">
-              <div
-                class="d-flex border rounded-4 bg-secondary align-items-center"
-              >
-                <i class="bi bi-flower1 fs-4 p-3"></i>
-                <div class="pl-4">Category 4</div>
+              <div class="d-flex border rounded-4 bg-purple align-items-center py-7">
+                <i class="bi bi-flower1 fs-4 px-3"></i>
+                <div class="pl-4">Ecology</div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <h4 class="mt-4 mb-3">Volunteering in Wicklow</h4>
 
         <!-- Card layout -->
-        <div class="row g-2 mb-2 justify-content-center">
+        <div class="row mb-2 justify-content-center">
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h4 class="card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h4>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 mt-3">
-            <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-
-                <!-- limit width on text section when card takes up entire row on small screen
-                    and use breakpoint to revert to 100% on larger screens -->
-                <div class="w-85 w-sm-100 mb-3">
                   <h4 class="card-title">
-                    TEST TEST Amet minim mollit non deserunt ullamco
+                    Amet minim mollit non deserunt ullamco
                   </h4>
 
-                  <p class="card-text">
+                  <p class="card-text mb-3">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor
                     do amet sint. Velit officia consequat duis enim.
                   </p>
-                </div>
 
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
-                  </div>
-                  <div>
-                    <p class="mb-0">Learn more</p>
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h4 class="card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h4>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Amet minim mollit non deserunt ullamco
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h4 class="card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h4>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Amet minim mollit non deserunt ullamco
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h4 class="card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h4>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Amet minim mollit non deserunt ullamco
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h4 class="card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h4>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Amet minim mollit non deserunt ullamco
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mt-3">
+            <div class="card">
+              <a href="/CA/details.html">
+                <img src="images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
+                  </div>
+                  <h4 class="card-title">
+                    Amet minim mollit non deserunt ullamco
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/logo1.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2"
+                      />
+                      <p class="mb-0">All in One</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -493,5 +502,10 @@
       <!-- Section: Links  -->
     </footer>
     <!-- Footer -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

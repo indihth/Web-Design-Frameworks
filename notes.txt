@@ -1,22 +1,25 @@
 checkout
 
 	desktop card layout
-        rework card/remove card layout       
+    
         divider ::before
         floating form labels
 
+        rework card/remove card layout  **DONE**     
 		move to above order summary or billing address **DONE**
         add quantity selector beside event info (miro example) **DONE**
         **fix margins on the grid section** **DONE**
 
 index
 
-    'Wicklow' dropdown chevron + underline
-    rework nav bar  
+    Poplular in... nav bar underline and highlight
+
+
+    'Wicklow' dropdown chevron + underline **DONE**
+    center align bottom card, Org and Learn more **DONE**
+    rework nav bar  **DONE**
         logo text first
         search bar left
-    center align bottom card, Org and Learn more
-
     trending categories, button style changed **DONE**
         fix shape
     card - remove border, add shadow **DONE**
@@ -27,7 +30,7 @@ details
         stretch, complete fluid OR
         background blur
     stick Buy button at bottom screen, mobile
-    
+
     about org section Follow and Contact buttons **DONE**
     Other Events - reduce height of images **DONE**
         

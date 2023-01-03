@@ -16,9 +16,9 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white h6">
+      <div class="container-fluid d-flex">
+        <a class="navbar-brand" href="#">Volunteer</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,38 +30,100 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-          </ul>
-          <form class="d-flex">
+        <div
+          class="collapse justify-content-between navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <form class="d-flex w-100 w-sm-50">
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Search Events"
               aria-label="Search"
             />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
           </form>
+          <ul class="navbar-nav mb-2 mb-lg-0 text-nowrap">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                Browse Projects
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Organise
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"> Why choose Volunteer? </a>
+                </li>
+                <li><a class="dropdown-item" href="#"> Pricing </a></li>
+                <li><a class="dropdown-item" href="#"> Resources </a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Help
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"> Where to find projects</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Contact project organisers
+                  </a>
+                </li>
+                <li><a class="dropdown-item" href="#"> Help Center </a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Login </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Register </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-    <div class="container-lg px-0 px-sm-6">
-      <!--hero background image in first container with colour wave, top padding-->
 
-      <!-- hero image container with 50% zoomed and blurred, large side margins -->
-      <!-- blurred background image -->
-      <!-- <div class="hero-bg-blur" style="background-image:url(images/details_bg.avif)""></div> -->
-      <!-- <img src="images/hero-bg.avif" alt="event poster" class="img-bg"/> -->
-      <img src="images/media_hero.avif" alt="event poster" class="img-fluid" />
+    <!-- Hero image and background -->
+    <div class="container-fluid hero-wrapper pt-0 pt-xl-4">
+
+      <!-- container that hold the div with bg image needs to be 
+        of position relative. Overflow is hidden to extend image so 
+        it's cut at a hard edge when the rounded edges are applied -->
+      <div
+        class="container-xl position-relative overflow-hidden bg-white rounded-5 d-flex justify-content-center"
+      >
+        <!--hero background image in first container with colour wave, top padding-->
+
+        <!-- hero image container with 50% zoomed and blurred -->
+        <!-- blurred background image -->
+        <div
+          class="hero-bg justify-content-center"
+          style="background-image: url(images/hero-bg.avif)"
+        ></div>
+        <!-- relative positioning to place image on top of the above div with bg image -->
+        <img
+          src="images/media_hero.avif"
+          alt="event poster"
+          class="img-fluid position-relative"
+        />
+      </div>
     </div>
+    <!-- Hero image and background end -->
     <!-- Begin of details -->
     <div class="container-lg">
       <div class="row">
@@ -251,14 +313,16 @@
         <!-- Right Column - buy button -->
         <!-- Fixed side position on scroll, change to fixed bottom bar on mobile? -->
 
-        <div class="col-md-4 fix-b">
-        <div class="p-3 border rounded-4 bg-white">
-          <p class="text-center">£30</p>
-          <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="button">Button</button>
+        <div class="col-md-4">
+          <div class="p-3 border rounded-4 bg-white">
+            <p class="text-center">£30</p>
+            <div class="d-grid gap-2">
+              <a href="/CA/checkout.html" class="btn btn-primary" type="button">
+                Button
+              </a>
+            </div>
           </div>
         </div>
-      </div>
       </div>
       <!-- End Right Column -->
     </div>
