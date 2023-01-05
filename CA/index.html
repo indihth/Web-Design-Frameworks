@@ -15,9 +15,12 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white h6">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white h6 py-3 mb-0">
       <div class="container-fluid d-flex">
-        <a class="navbar-brand" href="#">Volunteer</a>
+        <a href="index.html" class="d-flex px-2 align-items-center">
+          <img src="images/logo-xm.png" alt="Volunteer hands logo" class="me-2">
+          <div class="navbar-brand fs-5" href="#">Volunteer</div>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -136,23 +139,21 @@
           </div>
           <!-- Filter options -->
           <div class="filter">
-            <ul class="list-group list-group-horizontal">
-              <li>
-                <a class="list-group-item list-group-item-action text-muted active" href="#">All</a>
+          
+            <ul class="list-group list-group-horizontal h6">
+              <li class="list-group-item current">
+                <a href="#">All</a>
               </li>
-              <li>
-                <a class="list-group-item list-group-item-action text-muted" href="#">Online</a>
+              <li class="list-group-item">
+                <a href="#" class="filter dark-text">Online</a>
               </li>
-              <li>
-                <a class="list-group-item list-group-item-action text-muted" href="#">Today</a>
+              <li class="list-group-item">
+                <a href="#">Today</a>
               </li>
-              <li>
-                <a class="list-group-item list-group-item-action text-muted" href="#">This Weekend</a>
+              <li class="list-group-item">
+                <a href="#">This Weekend</a>
               </li>
             </ul>
-               
-               
-               
             
           </div>
           <!-- Filter options end -->
@@ -192,30 +193,63 @@
         <div class="row mb-2 justify-content-center">
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <a href="details.html">
+                <img src="images/card_images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>10.30am</p>
+                    <p>10 spots left</p>
+                  </div>
+                  <h4 class="card-title">
+                    Sea Plastic Beach Cleanup Project
+                  </h4>
+                  <p class="card-text mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus ducimus inventore suscipit ipsum tempora non incidunt laborum modi pariatur.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/card_images/logo1.jpg"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2 card-org-img"
+                      />
+                      <p class="mb-0">Faith United</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mt-3">
+          <div class="card">
+              <a href="details.html">
+                <img src="images/card_images/card2.avif" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="d-flex justify-content-between text-primary">
                     <p>3.30pm</p>
                     <p>6 spots left</p>
                   </div>
                   <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
+                    Kilcoole Tern Sanctuary Watch
                   </h4>
-
+                  <!-- didn't use .text-truncate because it doesn't take total character length into account
+                      I used webkit-line-clamp in the .card-text class instead  -->
                   <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque possimus est amet voluptatibus, corporis blanditiis a molestias sint qui rem tenetur animi ab suscipit quos fugiat! Exercitationem libero dolore numquam ullam sapiente quaerat ex, odio ad, facere, optio voluptatibus ipsam eum soluta veritatis at. Sint, magnam. Sunt, reprehenderit alias? Necessitatibus vitae architecto amet, in nulla asperiores. Neque, a magni.
                   </p>
 
                   <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                       <img
-                        src="images/logo1.png"
+                        src="images/card_images/logo2.png"
                         alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
+                        class="border rounded-circle me-2 card-org-img me-2"
                       />
-                      <p class="mb-0">All in One</p>
+                      <p class="mb-0">Encore Community</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <a href="#" class="mb-0">Learn more</a>
@@ -227,30 +261,29 @@
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <a href="details.html">
+                <img src="images/card_images/card3.avif" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="d-flex justify-content-between text-primary">
                     <p>3.30pm</p>
                     <p>6 spots left</p>
                   </div>
                   <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
+                    Albert Walk Regeneration Work
                   </h4>
 
                   <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
+                    Ducimus nam animi nemo dolorem sed voluptatibus ullam in molestiae, ab quos dolorum dolores maiores! Neque, quibusdam eum voluptatem, mollitia fugit minus deleniti odit accusantium esse odio id! Excepturi, laboriosam.
                   </p>
 
                   <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                       <img
-                        src="images/logo1.png"
+                        src="images/card_images/logo3.png"
                         alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
+                        class="border rounded-circle me-2 card-org-img me-2"
                       />
-                      <p class="mb-0">All in One</p>
+                      <p class="mb-0">Tidy Towns</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <a href="#" class="mb-0">Learn more</a>
@@ -262,30 +295,29 @@
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <a href="details.html">
+                <img src="images/card_images/card5.avif" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="d-flex justify-content-between text-primary">
                     <p>3.30pm</p>
                     <p>6 spots left</p>
                   </div>
                   <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
+                    Pack And Hand Out Bagged Food
                   </h4>
 
                   <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
+                    Consequatur blanditiis ea magnam autem voluptatum sunt? Facilis aperiam repudiandae doloremque illo eaque eum, quis, iure commodi error minima quas officia eveniet harum a ducimus laborum deleniti, sunt quisquam ipsum debitis deserunt praesentium odio laudantium voluptatem. Neque maiores nobis repellat odit maxime!
                   </p>
 
                   <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                       <img
-                        src="images/logo1.png"
+                        src="images/card_images/logo4.jpg"
                         alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
+                        class="border rounded-circle me-2 card-org-img me-2"
                       />
-                      <p class="mb-0">All in One</p>
+                      <p class="mb-0">The Connected Chef</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <a href="#" class="mb-0">Learn more</a>
@@ -297,30 +329,29 @@
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <a href="details.html">
+                <img src="images/card_images/card6.avif" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="d-flex justify-content-between text-primary">
                     <p>3.30pm</p>
                     <p>6 spots left</p>
                   </div>
                   <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
+                    Prepare And Distribute Halal Food
                   </h4>
 
                   <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
+                    Rem reiciendis molestiae vitae aspernatur necessitatibus saepe odit consequuntur eaque eligendi distinctio voluptatibus minus consectetur voluptatum recusandae perspiciatis, fugit facere cum dicta nihil quidem numquam minima fuga! In!
                   </p>
 
                   <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                       <img
-                        src="images/logo1.png"
+                        src="images/card_images/logo5.png"
                         alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
+                        class="border rounded-circle me-2 card-org-img me-2"
                       />
-                      <p class="mb-0">All in One</p>
+                      <p class="mb-0">Council of Peoples Org</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <a href="#" class="mb-0">Learn more</a>
@@ -332,65 +363,29 @@
           </div>
           <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
+              <a href="details.html">
+                <img src="images/card_images/card7.avif" class="card-img-top" alt="..." />
                 <div class="card-body">
                   <div class="d-flex justify-content-between text-primary">
                     <p>3.30pm</p>
                     <p>6 spots left</p>
                   </div>
                   <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
+                    Deliver Meals To Homebound Residents
                   </h4>
 
                   <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
+                    In labore nulla reiciendis quasi vitae voluptatem odio ex laboriosam recusandae optio deleniti eaque veritatis, magni quod at, tempore sunt provident dicta iure? Neque tempora ducimus temporibus sint molestiae pariatur voluptate a!
                   </p>
 
                   <div class="d-flex justify-content-between">
                     <div class="d-flex align-items-center">
                       <img
-                        src="images/logo1.png"
+                        src="images/card_images/logo1.jpg"
                         alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
+                        class="border rounded-circle me-2 card-org-img me-2"
                       />
-                      <p class="mb-0">All in One</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                      <a href="#" class="mb-0">Learn more</a>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-4 mt-3">
-            <div class="card">
-              <a href="/details.html">
-                <img src="images/card1.avif" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <div class="d-flex justify-content-between text-primary">
-                    <p>3.30pm</p>
-                    <p>6 spots left</p>
-                  </div>
-                  <h4 class="card-title">
-                    Amet minim mollit non deserunt ullamco
-                  </h4>
-
-                  <p class="card-text mb-3">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim.
-                  </p>
-
-                  <div class="d-flex justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <img
-                        src="images/logo1.png"
-                        alt="Volunteer Logo"
-                        class="border rounded-circle me-2"
-                      />
-                      <p class="mb-0">All in One</p>
+                      <p class="mb-0">Sisters with Purpose</p>
                     </div>
                     <div class="d-flex align-items-center">
                       <a href="#" class="mb-0">Learn more</a>
@@ -416,7 +411,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center bg-light text-muted">
+    <footer class="text-center bg-dark-dark text-light">
       <!-- Section: Links  -->
       <section class="border-top">
         <!-- text goes centered under small breakpoint -->
@@ -424,59 +419,42 @@
           <!-- Grid row -->
           <div class="row mt-3">
             <!-- Grid column -->
-            <!-- <div class="col-md-3 mx-auto mb-4">
-							Content
-							<h6 class="text-uppercase fw-bold mb-4">
-								Community Volunteer
-							</h6>
-							<p>
-								Here you can use rows and columns to organize your footer
-								content. Lorem ipsum dolor sit amet, consectetur adipisicing
-								elit.
-							</p>
-						</div> -->
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
+            <div class="col-lg-3 col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <h6 class="text-uppercase fw-bold mb-4">Help Center</h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                <a href="#!" class="text-reset">Frequently asked questions</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                <a href="#!" class="text-reset">Registering as an organisation</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="#!" class="text-reset">Report a problem</a>
               </p>
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
+            <div class="col-lg-2 col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <h6 class="text-uppercase fw-bold mb-4">Other links</h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="#!" class="text-reset">Privacy</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="#!" class="text-reset">Press</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="#!" class="text-reset">Partnership</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="#!" class="text-reset">Further help</a>
               </p>
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-4 mx-auto mb-4">
+            <div class="col-lg-3 col-md-4 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
               <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
@@ -487,7 +465,7 @@
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
             </div>
-            <div class="col-md-4 mx-auto mb-4 text-end">
+            <div class="col-lg-4 mx-auto mb-4 d-none d-lg-block">
               <img
                 class="img-fluid"
                 src="images/globePerson.png"

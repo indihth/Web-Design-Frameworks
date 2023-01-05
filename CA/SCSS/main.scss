@@ -25,6 +25,7 @@ $purple: #eee5ff;
 $light: #f0f2f1;
 $dark: #39364f;
 
+
 // Fonts
 // $font-family-base: "Playfair Display";
 // $font-family-base: "Patrick Hand";
@@ -72,13 +73,10 @@ $border-radius: 0.25rem;
 
 // Width
 
+// add responsiveness and extra values to width
 $utilities: map-merge(
   $utilities,
   (
-    // "width": map-merge(
-    //   map-get($utilities, "width"),
-    //   ( responsive: true ),
-    // ),
     "width":
       map-merge(
         map-get($utilities, "width"),
@@ -94,6 +92,20 @@ $utilities: map-merge(
                 90: 90%,
               )
             ),
+        )
+      ),
+  )
+);
+
+// Enable responsiveness on rounded corners
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded":
+      map-merge(
+        map-get($utilities, "rounded"),
+        (
+          responsive: true,
         )
       ),
   )
@@ -159,10 +171,10 @@ $h6-font-size: 0.875rem;
 // custom colours
 
 $custom-colors: (
-  "contrast": rgb(251, 230, 0),
+  "dark-purple": #1E0A3C,
   "primary-light": rgb(164, 213, 235),
   "secondary-dark": rgb(13, 111, 97),
-  "bg": #f0f2f2,
+  "bg": #d8d8d8
 );
 
 // merge custom colours with theme colours
@@ -182,30 +194,54 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
   .bg-#{$color}-light {
     background-color: tint-color($val, 60%);
   }
+  .bg-#{$color}-dark {
+    background-color: shade-color($val, 70%);
+  }
 }
 
+
 //////////////////////////
-// Filter options nav
+// Filter options
 // underline on hover
 //////////////////////////
-.filter .list-group .list-group-item::after {
+
+.list-group-item {
+  padding: 0.5rem 0.25rem !important;
+  margin: 0rem 0.5rem;
+  // padding: var(--bs-list-group-item-padding-y) var(--bs-list-group-item-padding-x);
+}
+
+// underline on hover
+// width 0% so it doesn't show on default state
+.filter .list-group .list-group-item a::after,
+.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
+  margin-bottom: -8px;
   background-color: #000000;
   width: 0%;
   content: "";
-  height: 2px;
+  height: 1.5px;
 }
 
-.filter .list-group .list-group-item:hover::after {
+// display on hover
+.filter .list-group .list-group-item a:hover::after {
   width: 100%;
 }
 
-.list-group-item-action {
-  width: 0;
+// maintains the same text colour for default state and hover
+.current > a,
+.current > a:hover {
+  color: var(--bs-primary);
+}
+
+// Change colour and keep constant for currently selected
+.current::after {
+  background-color: var(--bs-primary);
+  width: 100%;
 }
 //////////////////////////
 
@@ -221,6 +257,7 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
   height: 10rem;
   object-fit: cover;
 }
+
 
 .img-fit {
   object-fit: cover;
@@ -260,13 +297,43 @@ $theme-colors: map-remove($theme-colors, "danger", "warning", "success");
   width: 100%;
 }
 
+// .card {
+//   height: ;
+// }
+
 .org-img {
   height: 74px;
   width: 74px;
 }
 
+.card-org-img {
+  height: 40px;
+  width: 40px;
+}
+
+/// webkit-line-clamp allows selecting how many lines of text
+/// will be displayed before truncating 
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: var(--word-break, 'none');
+  overflow: hidden;
+  hyphens: auto;
+}
+
 .detail-icon {
-  padding: 0.65rem;
+  /// padding: 0.70rem .90rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--bs-gray-100);
+}
+
+footer {
+  background-color: #1E0A3C;
 }
 
 // Display divider after small breakpoint

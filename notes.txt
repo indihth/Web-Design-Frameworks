@@ -1,20 +1,17 @@
 checkout
 
-	desktop card layout
-    
-        divider ::before
-        floating form labels
+    divider ::before
+    floating form labels
 
-        rework card/remove card layout  **DONE**     
-		move to above order summary or billing address **DONE**
-        add quantity selector beside event info (miro example) **DONE**
-        **fix margins on the grid section** **DONE**
+
+    rework card/remove card layout  **DONE**     
+    move to above order summary or billing address **DONE**
+    add quantity selector beside event info (miro example) **DONE**
+    **fix margins on the grid section** **DONE**
 
 index
 
-    Poplular in... nav bar underline and highlight
-
-
+    Poplular in... nav bar underline and highlight **DONE**
     'Wicklow' dropdown chevron + underline **DONE**
     center align bottom card, Org and Learn more **DONE**
     rework nav bar  **DONE**
@@ -26,11 +23,12 @@ index
 
 details 
 
-    hero image  
-        stretch, complete fluid OR
-        background blur
     stick Buy button at bottom screen, mobile
 
+
+    hero image **DONE**
+        stretch, complete fluid OR
+        background blur
     about org section Follow and Contact buttons **DONE**
     Other Events - reduce height of images **DONE**
         

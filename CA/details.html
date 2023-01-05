@@ -16,9 +16,12 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white h6">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white h6 py-3 mb-0">
       <div class="container-fluid d-flex">
-        <a class="navbar-brand" href="#">Volunteer</a>
+        <a href="index.html" class="d-flex px-2 align-items-center">
+          <img src="images/logo-xm.png" alt="Volunteer hands logo" class="me-2">
+          <div class="navbar-brand fs-5" href="#">Volunteer</div>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -99,20 +102,21 @@
     </nav>
 
     <!-- Hero image and background -->
-    <div class="container-fluid hero-wrapper pt-0 pt-xl-4">
+    <div class="container-fluid hero-wrapper pt-0 pt-xl-4 p-0">
 
       <!-- container that hold the div with bg image needs to be 
         of position relative. Overflow is hidden to extend image so 
         it's cut at a hard edge when the rounded edges are applied -->
+        <!-- rounded edges at xl size, remove padding to allow full width
+        images under xl -->
       <div
-        class="container-xl position-relative overflow-hidden bg-white rounded-5 d-flex justify-content-center"
+        class="container-xl rounded-xl-5 rounded-0 d-flex justify-content-center position-relative overflow-hidden bg-white p-0"
       >
-        <!--hero background image in first container with colour wave, top padding-->
 
-        <!-- hero image container with 50% zoomed and blurred -->
         <!-- blurred background image -->
+        <!-- show bg img after md breakpoint -->
         <div
-          class="hero-bg justify-content-center"
+          class="hero-bg justify-content-center d-md-block d-none"
           style="background-image: url(images/hero-bg.avif)"
         ></div>
         <!-- relative positioning to place image on top of the above div with bg image -->
@@ -124,6 +128,7 @@
       </div>
     </div>
     <!-- Hero image and background end -->
+
     <!-- Begin of details -->
     <div class="container-lg">
       <div class="row">
@@ -162,7 +167,7 @@
             <div class="row mb-3">
               <div class="col-sm-6">
                 <div class="d-flex align-items-start mb-4">
-                  <div class="h6 detail-icon me-3 rounded-3 bg-bg">
+                  <div class="h5 detail-icon me-3 rounded-3">
                     <i class="bi bi-calendar-event"></i>
                   </div>
                   <div class="loc-date h6">
@@ -180,7 +185,7 @@
               <div class="col-sm-6 ps-sm-3">
                 <div class="d-flex align-items-start">
                   <div class="ps-sm-4 location">
-                    <div class="h5 detail-icon me-3 rounded-3 bg-bg">
+                    <div class="h4 detail-icon me-3 rounded-3">
                       <i class="bi bi-geo-alt"></i>
                     </div>
                   </div>
@@ -230,7 +235,7 @@
             <div class="d-sm-flex mt-3">
               <div class="d-flex fw-bold align-items-center me-sm-5">
                 <div class="">
-                  <div class="h5 detail-icon me-2 mb-0 rounded-3 bg-bg">
+                  <div class="h5 detail-icon me-2 mb-0 rounded-3">
                     <i class="bi bi-clock fs-5"></i>
                   </div>
                 </div>
@@ -238,7 +243,7 @@
               </div>
               <div class="d-flex fw-bold mt-3 mt-sm-0 align-items-center">
                 <div class="ps-sm-4">
-                  <div class="h5 detail-icon me-2 mb-0 rounded-3 bg-bg">
+                  <div class="h5 detail-icon me-2 mb-0 rounded-3">
                     <i class="bi bi-ticket fs-5"></i>
                   </div>
                 </div>
@@ -317,7 +322,7 @@
           <div class="p-3 border rounded-4 bg-white">
             <p class="text-center">£30</p>
             <div class="d-grid gap-2">
-              <a href="/checkout.html" class="btn btn-primary" type="button">
+              <a href="checkout.html" class="btn btn-primary" type="button">
                 Button
               </a>
             </div>
@@ -369,7 +374,7 @@
     <!-- More from this Organiser -->
     <!-- fix image height, too big for text -->
     <div class="container-fix-sm">
-      <h2 class="h2 mt-4 text-center mb-5">Other events you may like</h2>
+      <h2 class="h2 mt-4 text-center mb-5">More from this Organiser</h2>
       <div class="row mb-4">
         <div class="col-sm-4 order-sm-last mb-3">
           <img
@@ -410,107 +415,109 @@
     <!-- End More from this Organiser -->
 
     <!-- Events you may like -->
-    <div class="container-fluid border-top bg-contrast-light mb-5">
+    <div class="container-fluid border-top bg-purple-light pb-5">
       <div class="container-lg">
         <h2 class="h2 mt-4 mb-3">Other events you may like</h2>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 mt-3">
+        <div class="row">        
+          <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card1.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h3 class="h3 card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h3>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="details.html">
+                <img src="images/card_images/card1.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>10.30am</p>
+                    <p>10 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Sea Plastic Beach Cleanup Project
+                  </h4>
+                  <p class="card-text mb-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt necessitatibus ducimus inventore suscipit ipsum tempora non incidunt laborum modi pariatur.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/card_images/logo1.jpg"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2 card-org-img"
+                      />
+                      <p class="mb-0">Faith United</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
+          </div>          
+          <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card-woman.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h3 class="h3 card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h3>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="details.html">
+                <img src="images/card_images/card3.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Albert Walk Regeneration Work
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Ducimus nam animi nemo dolorem sed voluptatibus ullam in molestiae, ab quos dolorum dolores maiores! Neque, quibusdam eum voluptatem, mollitia fugit minus deleniti odit accusantium esse odio id! Excepturi, laboriosam.
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/card_images/logo3.png"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2 card-org-img me-2"
+                      />
+                      <p class="mb-0">Tidy Towns</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-          </div>
-          <div class="col-md-4 col-sm-6 mt-3">
+          </div>          
+          <div class="col-sm-6 col-md-4 mt-3">
             <div class="card">
-              <img src="images/card-bird.avif" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <div class="d-flex justify-content-between text-primary">
-                  <p>3.30pm</p>
-                  <p>6 spots left</p>
-                </div>
-                <h3 class="h3 card-title">
-                  Amet minim mollit non deserunt ullamco
-                </h3>
-
-                <p class="card-text">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint. Velit officia consequat duis enim.
-                </p>
-
-                <div class="d-flex justify-content-between">
-                  <div class="d-flex align-items-center">
-                    <img
-                      src="images/logo1.png"
-                      alt="Volunteer Logo"
-                      class="border rounded-circle"
-                    />
-                    <p class="m-0">All in One</p>
+              <a href="details.html">
+                <img src="images/card_images/card5.avif" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <div class="d-flex justify-content-between text-primary">
+                    <p>3.30pm</p>
+                    <p>6 spots left</p>
                   </div>
-                  <div>
-                    <p>Learn more</p>
+                  <h4 class="card-title">
+                    Pack And Hand Out Bagged Food
+                  </h4>
+
+                  <p class="card-text mb-3">
+                    Consequatur blanditiis ea magnam autem voluptatum sunt? Facilis aperiam repudiandae doloremque illo eaque eum, quis, iure commodi error minima quas officia eveniet harum a ducimus laborum deleniti, sunt quisquam ipsum debitis deserunt praesentium odio laudantium voluptatem. Neque maiores nobis repellat odit maxime!
+                  </p>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="images/card_images/logo4.jpg"
+                        alt="Volunteer Logo"
+                        class="border rounded-circle me-2 card-org-img me-2"
+                      />
+                      <p class="mb-0">The Connected Chef</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a href="#" class="mb-0">Learn more</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -519,7 +526,7 @@
     <!-- End Events you may like -->
 
     <!-- Footer -->
-    <footer class="text-center bg-light text-muted">
+    <footer class="text-center bg-dark-dark text-light">
       <!-- Section: Links  -->
       <section class="border-top">
         <!-- text goes centered under small breakpoint -->
@@ -527,61 +534,44 @@
           <!-- Grid row -->
           <div class="row mt-3">
             <!-- Grid column -->
-            <!-- <div class="col-md-3 mx-auto mb-4">
-							Content
-							<h5 class="text-uppercase fw-bold mb-4">
-								Community Volunteer
-							</h5>
-							<p>
-								Here you can use rows and columns to organize your footer
-								content. Lorem ipsum dolor sit amet, consectetur adipisicing
-								elit.
-							</p>
-						</div> -->
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
+            <div class="col-lg-3 col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h5 class="text-uppercase fw-bold mb-4">Products</h5>
+              <h6 class="text-uppercase fw-bold mb-4">Help Center</h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                <a href="#!" class="text-reset">Frequently asked questions</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                <a href="#!" class="text-reset">Registering as an organisation</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
-              </p>
-              <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="#!" class="text-reset">Report a problem</a>
               </p>
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-2 mx-auto mb-4">
+            <div class="col-lg-2 col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h5 class="text-uppercase fw-bold mb-4">Useful links</h5>
+              <h6 class="text-uppercase fw-bold mb-4">Other links</h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="#!" class="text-reset">Privacy</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="#!" class="text-reset">Press</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="#!" class="text-reset">Partnership</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="#!" class="text-reset">Further help</a>
               </p>
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-4 mx-auto mb-4">
+            <div class="col-lg-3 col-md-4 mx-auto mb-4">
               <!-- Links -->
-              <h5 class="text-uppercase fw-bold mb-4">Contact</h5>
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
               <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
@@ -590,7 +580,7 @@
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
             </div>
-            <div class="col-md-4 mx-auto mb-4 text-end">
+            <div class="col-lg-4 mx-auto mb-4 d-none d-lg-block">
               <img
                 class="img-fluid"
                 src="images/globePerson.png"
@@ -605,5 +595,13 @@
       <!-- Section: Links  -->
     </footer>
     <!-- Footer -->
+
+    <!-- Scripts -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"
+  ></script>
+    <!-- Scripts end -->
   </body>
 </html>
